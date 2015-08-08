@@ -3,7 +3,7 @@ Dublin Bus Real Time API
 
 API access to the [Real Time Passenger Information](http://rtpi.ie/) (RTPI) for Dublin Bus services.
 
-Setup and run the Ruby/Sinatra app yourself or use the existing service at [http://dublinbus-api.heroku.com/stops](http://dublinbus-api.heroku.com/stops).
+Setup and run the Ruby/Sinatra app yourself or use the existing service at [https://quiet-sands-1191.herokuapp.com/stops](https://quiet-sands-1191.herokuapp.com/stops).
 Note that usage of the running service is permitted for non-commercial use only. There are currently no rate
 limits but please be respectful with your usage.
 
@@ -28,7 +28,7 @@ JSON is the only format supported. JSONP will be returned if a *callback* parame
 
 ### Stops
 
-**GET [/stops](http://dublinbus-api.heroku.com/stops)**
+**GET [/stops](https://quiet-sands-1191.herokuapp.com/stops)**
 
 List all the bus stops in the system with the following optional parameter constraints:
 
@@ -38,7 +38,7 @@ List all the bus stops in the system with the following optional parameter const
 
 **note** results are limited to 30 entries per request, pagination will be implemented
 
-Example: GET [/stops?origin=53.343488,-6.249311&range=0.2&routes=2,3](http://dublinbus-api.heroku.com/stops?origin=53.343488,-6.249311&range=0.2&routes=2,3)
+Example: GET [/stops?origin=53.343488,-6.249311&range=0.2&routes=2,3](https://quiet-sands-1191.herokuapp.com/stops?origin=53.343488,-6.249311&range=0.2&routes=2,3)
 
 Gets all #2 or #3 bus stops within 200m of Pearse St Dart station
 
@@ -81,14 +81,14 @@ Result:
   * *from*: the bus stop that the route starts at
   * *to*: the bus stop that the route stops at
 
-**GET [/stops/{name}/{id}](http://dublinbus-api.heroku.com/stops/lower+o%27connell+st/00271)**
+**GET [/stops/{name}/{id}](https://quiet-sands-1191.herokuapp.com/stops/lower+o%27connell+st/00271)**
 
 Get the current live information for a particular bus stop.
 
 * *name*: the name of the bus stop
 * *id*: the ID of the bus stop
 
-Example: GET [/stops/lower+o%27connell+st/00271](http://dublinbus-api.heroku.com/stops/lower+o%27connell+st/00271)
+Example: GET [/stops/lower+o%27connell+st/00271](https://quiet-sands-1191.herokuapp.com/stops/lower+o%27connell+st/00271)
 
 Gets the current information for the number 2 bus stop on Lower O'Connell St
 
@@ -144,7 +144,7 @@ field contains the live departure information for the bus stop.
 
 ### Services
 
-**GET [/services](http://dublinbus-api.heroku.com/services)**
+**GET [/services](https://quiet-sands-1191.herokuapp.com/services)**
 
 List all the services in the system. 
 
@@ -182,13 +182,13 @@ Result:
         },
         ...
 
-**GET [/services/{route}](http://dublinbus-api.heroku.com/services/2)**
+**GET [/services/{route}](https://quiet-sands-1191.herokuapp.com/services/2)**
 
 Get detailed stop information for all services on a particular route
 
 * *route*: the name of the route the services operates on
 
-Example: GET [/services/2](http://dublinbus-api.heroku.com/services/2)
+Example: GET [/services/2](https://quiet-sands-1191.herokuapp.com/services/2)
 
 Gets stop information for services on the #2 route
 
@@ -227,7 +227,7 @@ Result:
       ]
     }
 
-**GET [/services/{route}/{id}](http://dublinbus-api.heroku.com/services/2/0202)**
+**GET [/services/{route}/{id}](https://quiet-sands-1191.herokuapp.com/services/2/0202)**
 
 Get detailed stop information for a particular service
 
