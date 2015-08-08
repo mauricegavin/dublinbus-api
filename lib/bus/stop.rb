@@ -66,7 +66,7 @@ module Bus
     def update!
       puts "update!"
       return self if (Time.now.utc - @updated) <= 30
-      source = RestClient.get "http://rtpi.ie/Text/Pages/WebDisplay.aspx?stopRef=#{@id}"
+      source = RestClient.get "http://rtpi.ie/Text/WebDisplay.aspx?stopRef=#{@id}"
       doc = REXML::Document.new source
       @buses = doc.root.get_elements('//table/tr').drop(1).map { |tr|
         Bus.new(tr.elements[1].text, tr.elements[2].text, tr.elements[3].text.to_i)
