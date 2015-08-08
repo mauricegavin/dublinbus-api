@@ -16,7 +16,7 @@ module Bus
     end
 
     get '/' do
-      redirect 'http://github.com/jneill/dublinbus-api'
+      redirect 'http://github.com/mauricegavin/dublinbus-api'
     end
 
     get '/services' do
